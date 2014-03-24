@@ -23,6 +23,9 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
         <title>Barcode Scanner Demo</title>
     </head>
     <body>
@@ -34,31 +37,34 @@
             </div>
             <p><a href="#" class="topcoat-button" id="scan">SCAN</a></p>
             <p><a href="#" class="topcoat-button" id="encode">ENCODE</a></p>
-            <center><b>cars or bikes</b></center>
-            <center><input onclick="connect(this.value)" type="button" value="cars" /></center>
-            <center><input onclick="connect(this.value)" type="button" value="bikes" /></center>
-            <center><b>Results</b></center>
-            <ul id="result"></ul>
+
 
 <script charset="utf&minus;8" type="text/javascript">
-function connect(e)
-{
-var term= {button:e};
-$.ajax({
-url:'http://www.indiageeks.in/tutorials/reply.php',
-type:'POST',
-data:term,
-dataType:'json',
-error:function(jqXHR,text_status,strError){
-alert(“no connection”);},
-timeout:60000,
-success:function(data){
-$("#result").html("");
-for(var i in data){
-$("#result").append("<li>"+data[i]+"</li>");
-}
-}
-});}
+  <div data-role="main" class="ui-content">
+    <div data-role="collapsibleset">
+      <div data-role="collapsible">
+        <h3>Click me - I'm collapsible!</h3>
+        <p>I'm the expanded content.</p>
+      </div>
+      <div data-role="collapsible">
+        <h3>Click me - I'm collapsible!</h3>
+        <p>I'm the expanded content.</p>
+      </div>
+      <div data-role="collapsible">
+        <h3>Click me - I'm collapsible!</h3>
+        <p>I'm the expanded content.</p>
+      </div>
+      <div data-role="collapsible">
+        <h3>Click me - I'm collapsible!</h3>
+        <p>I'm the expanded content.</p>
+      </div>
+    </div>
+  </div>
+
+  <div data-role="footer">
+    <h1>Insert Footer Text Here</h1>
+  </div>
+</div> 
 </script>
 
 
