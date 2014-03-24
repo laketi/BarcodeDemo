@@ -77,8 +77,8 @@ var app = {
             }
             */
              viewUrl = viewUrl.concat(result);
-             window.plugins.childBrowser.showWebPage(viewUrl, { showLocationBar: false });
-        
+//             window.plugins.childBrowser.showWebPage(viewUrl, { showLocationBar: false });
+             navigator.app.loadUrl(viewUrl, { openExternal:true });
         }, function (error) { 
             console.log("Scanning failed: ", error); 
         } );
