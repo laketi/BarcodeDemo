@@ -55,6 +55,8 @@ var app = {
         console.log('scanning');
         
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
+        var viewUrl = "http://www.upcdatabase.com/item/";
+        var result;
 
         scanner.scan( function (result) { 
 
@@ -74,20 +76,14 @@ var app = {
                 window.plugins.childBrowser.showWebPage(args.text, { showLocationBar: false });
             }
             */
-            view(result.text);
-
+             viewUrl = viewUrl.concat(result);
+             window.plugins.childBrowser.showWebPage(viewUrl, { showLocationBar: false });
+        
         }, function (error) { 
             console.log("Scanning failed: ", error); 
         } );
     },
 
-   view: function() {
-        var viewUrl = "http://www.upcdatabase.com/item/";
-        var result;
-        var viewUrl = str1.concat(result);
-        window.plugins.childBrowser.showWebPage(viewUrl, { showLocationBar: false });
-
-   },
 
     encode: function() {
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
