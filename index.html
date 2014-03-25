@@ -39,27 +39,14 @@ under the License.
   <h1>Select Menus</h1>
   </div>
 
+{html-include:url=http://test.elavaravinto.fi/menus.html}
+
   <div data-role="main" class="ui-content">
     <form method="post" action="http://test.elavaravinto.fi/ean.php">
       <fieldset class="ui-field-contain">
         <label for="shop">Valitse kauppa</label>
         <select name="shop" id="shop">
-          <option value="citymarket_auranlaakso">Citymarket Auranlaakso (Turku)</option>
-          <option value="citymarket_kupittaa">Citymarket Kupittaa (Turku)</option>
-          <option value="citymarket_jumbo">Citymarket Jumbo (Vantaa)</option>
-          <option value="citymarket_skanssi">Citymarket Skanssi (Turku)</option>
-          <option value="citymarket_myyrmaki">Citymarket Myyrmaki (Vantaa)</option>
-          <option value="citymarket_tammisto">Citymarket Tammisto (Vantaa)</option>
-          <option value="ksupermarket_hameenkyla">K-supermarket Hameenkyla (Vantaa)</option>
-          <option value="ksupermarket_herkkupahkina">K-supermarket Herkkupahkina (Vantaa)</option>
-          <option value="ksupermarket_katariina">K-supermarket Katariina (Kaarina)</option>
-          <option value="ksupermarket_hannunniittu">K-supermarket Hannunniittu (Turku)</option>
-          <option value="ksupermarket_manhattan">K-supermarket Manhattan (Turku)</option>
-          <option value="prisma_piispanristi">Prisma Piispanristi (Kaarina)</option>
-          <option value="prisma_paaskyvuori">Prisma Paaskyvuori (Turku)</option>
-          <option value="prisma_jumbo">Prisma Jumbo</option>
-          <option value="ruohonjuuri_helsinki">Ruohonjuuri (Helsinki)</option>
-          <option value="ruohonjuuri_turku">Ruohonjuuri (Turku)</option>
+          {html-include:url=http://test.elavaravinto.fi/kaupat.php}
         </select>
       </fieldset>
         <label for="hinta">Hinta sentteina:</label>
