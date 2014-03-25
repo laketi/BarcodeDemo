@@ -71,6 +71,7 @@ var app = {
                 "cancelled: " + result.cancelled + "\n");
             document.getElementById("info").innerHTML = result.text;
             console.log(result);
+
             /*
             if (args.format == "QR_CODE") {
                 window.plugins.childBrowser.showWebPage(args.text, { showLocationBar: false });
@@ -78,7 +79,7 @@ var app = {
             */
              viewUrl = viewUrl.concat(result);
 //             window.plugins.childBrowser.showWebPage(viewUrl, { showLocationBar: false });
-             navigator.app.loadUrl(viewUrl, { openExternal:true });
+//             navigator.app.loadUrl(viewUrl, { openExternal:true });
         }, function (error) { 
             console.log("Scanning failed: ", error); 
         } );
