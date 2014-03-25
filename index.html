@@ -34,41 +34,37 @@ under the License.
             </div>
             <p><a href="#" class="topcoat-button" id="scan">SCAN</a></p>
             <p><a href="#" class="topcoat-button" id="encode">ENCODE</a></p>
-            <center><b>cars or bikes</b></center>
-            <center><input onclick="connect(this.value)" type="button" value="cars" /></center>
-            <center><input onclick="connect(this.value)" type="button" value="bikes" /></center>
-            <center><b>Results</b></center>
-            <ul id="result"></ul>
-            <input type="number" min="0" step="1" pattern="\d+"/>
 
-<script charset="utf&minus;8" type="text/javascript">
-function connect(e)
-{
-var term= {button:e};
-$.ajax({
-url:'http://www.indiageeks.in/tutorials/reply.php',
-type:'POST',
-data:term,
-dataType:'json',
-error:function(jqXHR,text_status,strError){
-alert(“no connection”);},
-timeout:60000,
-success:function(data){
-$("#result").html("");
-for(var i in data){
-$("#result").append("<li>"+data[i]+"</li>");
-}
-}
-});}
-</script>
+<div data-role="page">
+  <div data-role="header">
+  <h1>Select Menus</h1>
+  </div>
 
+  <div data-role="main" class="ui-content">
+    <form method="post" action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi">
+      <fieldset class="ui-field-contain">
+        <label for="shop">Valitte kauppa</label>
+        <select name="shop" id="shop">
+          <option value="citymarket_auranlaakso">Citymarket Auranlaakso</option>
+          <option value="citymarket_kupittaa">Citymarket Kupittaa</option>
+          <option value="citymarket_skanssi">Citymarket Skanssi</option>
+          <option value="citymarket_myyrmaki">Citymarket Myyrmaki</option>
+          <option value="kmarket_kaarina">K-market Kaarina</option>
+          <option value="kmarket_hila">K-market Hila</option>
+          <option value="prisma_piispanristi">Prisma Piispanristi</option>
+          <option value="prisma_paaskyvuori">Prisma Paaskyvuori</option>
+        </select>
+      </fieldset>
+        <label for="hinta">Hinta:</label>
+        <input type="text" name="hinta" id="hinta">
+        <label for="ean">Ean:</label>
+        <input type="text" name="ean" id="ean">
+      <input type="submit" data-inline="true" value="Submit">
+    </form>
+  </div>
+</div>
 
-            <p id="info"></p>
-            <h2>OPENING LINKS:</h2>
-            <p><a href="#" class="topcoat-button" onclick="window.open('http://www.nhl.com', '_blank', 'location=yes');">InAppBrowser</a></p>
-            <p><a href="#" class="topcoat-button" onclick="window.open('http://www.nhl.com', '_system', 'location=yes');">System Browser</a></p>
-            <p><a href="#" class="topcoat-button" onclick="window.open('http://www.yahoo.com', '_self', 'location=yes');">This Webview</a></p>
-            <p><a href="#" class="topcoat-button" onclick="window.plugins.childBrowser.showWebPage('http://www.nhl.com', {});">ChildBrowser</a></p>
+        <p id="info"></p>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="barcodescanner.js"></script>
