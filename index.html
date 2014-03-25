@@ -39,24 +39,10 @@ under the License.
   <h1>Select Menus</h1>
   </div>
 
-{html-include:url=http://test.elavaravinto.fi/menus.html}
-
-  <div data-role="main" class="ui-content">
-    <form method="post" action="http://test.elavaravinto.fi/ean.php">
-      <fieldset class="ui-field-contain">
-        <label for="shop">Valitse kauppa</label>
-        <select name="shop" id="shop">
-          {html-include:url=http://test.elavaravinto.fi/kaupat.php}
-        </select>
-      </fieldset>
-        <label for="hinta">Hinta sentteina:</label>
-        <input type="tel" name="hinta" id="hinta">
-        <label for="ean">Ean:</label>
-        <input type="tel" name="ean" id="ean">
-      <input type="submit" data-inline="true" value="Submit">
-    </form>
-  </div>
-</div>
+<script>
+{html-include:url=http://test.elavaravinto.fi/kaupat.html}
+</script>
+<iframe id="extFrame" src="http://test.elavaravinto.fi/kaupat.html"></iframe>
 
         <p id="info"></p>
         </div>
