@@ -90,6 +90,19 @@ var app = {
     },
 
 
+
+    search: function() {
+        var viewUrl = "https://google.com/m/products?q=";
+        viewUrl = viewUrl.concat(document.getElementById('ean').value);
+        window.plugins.childBrowser.showWebPage(viewUrl, { showLocationBar: false });
+    }
+
+    getprices: function() {
+        var viewUrl = "https://test.elavaravinto.fi/getprices?q=";
+        viewUrl = viewUrl.concat(document.getElementById('ean').value);
+        window.plugins.childBrowser.showWebPage(viewUrl, { showLocationBar: false });
+    }
+
     encode: function() {
         var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
