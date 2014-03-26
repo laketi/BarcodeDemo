@@ -72,6 +72,7 @@ var app = {
             document.getElementById("info").innerHTML = result.text;
             console.log(result);
             document.getElementById('ean').value = result.text;
+            document.getElementById('uuid').value = device.uuid;
   //          document.getElementById('extFrame').contentWindow['ean'] = result.text;
 //            $('#extFrame').contents().find('ean').html(result.text); 
 
