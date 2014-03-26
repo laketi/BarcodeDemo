@@ -43,14 +43,13 @@ under the License.
   <h1>Laken EAN-sovellus v0.1</h1>
   </div>
 <!-- <script>$("#scan").click(function() {scan();});</script> -->
-<button id="scan" data-inline="true">Lue EAN-koodi</button>
-            
+
 <!-- <p><a href="#" class="topcoat-button" id="scan">Lue EAN-koodi</a></p> -->
 
  <div data-role="main" class="ui-content">
     <form method="post" action="http://test.elavaravinto.fi/ean.php">
       <fieldset class="ui-field-contain">
-        <label for="shop">Valitse kauppa</label><br>
+        <label for="shop">Valitse kauppa johon hintatieto lisataan:</label><br>
         <select name="shop" id="shop" data-native-menu="false" data-force-dialog="true" data-native-menu="false" data-filter="true">
           <option value="citymarket_auranlaakso">Citymarket Auranlaakso (Turku)</option>
           <option value="citymarket_klaukkala">Citymarket Klaukkala (Nurmijarvi)</option>
@@ -77,16 +76,18 @@ under the License.
           <option value="tuntematon_kauppa">Tuntematon kauppa (testiskannaus?)</option>
         </select>
       </fieldset>
-        <label for="user">Username:</label><br>
+        <label for="user">Käyttäjänimi:</label><br>
         <input type=”text” name=”user” id="user" value="test1"> <br>
-        <label for="hinta">Hinta sentteina:</label><br>
+        <label for="hinta">Ostoksen hinta sentteina:</label><br>
         <input type="tel" name="hinta" id="hinta"> <br>
-        <label for="ean">Ean:</label><br>
+        <label for="ean">Tuotteen EAN-koodi:</label><br>
         <input type="tel" name="ean" id="ean"> <br>
       <input type="submit" data-inline="true" value="Laheta tiedot palvelimelle">
     </form>
   </div>
 </div>
+<button id="scan" data-inline="true">Lue EAN-koodi kameralla tuotteesta</button>
+
         <p id="info"></p>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
