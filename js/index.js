@@ -37,6 +37,7 @@ var app = {
     // function, we must explicity call `app.receivedEvent(...);`
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        document.getElementById('uuid').value = device.uuid;
     },
 
     // Update DOM on a Received Event
@@ -87,10 +88,6 @@ var app = {
             console.log("Scanning failed: ", error); 
         } );
     },
-
-    function onDeviceReady() {
-        document.getElementById('uuid').value = device.uuid;
-    }
 
 
     encode: function() {
