@@ -43,14 +43,14 @@ under the License.
   <h1>Laken EAN-sovellus v0.1</h1>
   </div>
 <!-- <script>$("#scan").click(function() {scan();});</script> -->
-<button id="scan">Lue EAN-koodi</button>
+<button id="scan" data-inline="true">Lue EAN-koodi</button>
             
 <!-- <p><a href="#" class="topcoat-button" id="scan">Lue EAN-koodi</a></p> -->
 
  <div data-role="main" class="ui-content">
     <form method="post" action="http://test.elavaravinto.fi/ean.php">
       <fieldset class="ui-field-contain">
-        <label for="shop">Valitse kauppa</label>
+        <label for="shop">Valitse kauppa</label><br>
         <select name="shop" id="shop" data-native-menu="false" data-force-dialog="true" data-native-menu="false" data-filter="true">
           <option value="citymarket_auranlaakso">Citymarket Auranlaakso (Turku)</option>
           <option value="citymarket_klaukkala">Citymarket Klaukkala (Nurmijarvi)</option>
