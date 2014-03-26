@@ -35,6 +35,8 @@ under the License.
             <p><a href="#" class="topcoat-button" id="scan">Lue EAN-koodi</a></p>
             <p><a href="#" class="topcoat-button" id="encode">Hae koodilla tuotetietoja</a></p>
 
+        <a href="#" onclick="$('#shop').selectmenu('refresh', true); return false;">Refresh the selectmenu</a>
+
 <div data-role="page">
   <div data-role="header">
   <h1>Select Menus</h1>
@@ -43,7 +45,7 @@ under the License.
     <form method="post" action="http://test.elavaravinto.fi/ean.php">
       <fieldset class="ui-field-contain">
         <label for="shop">Valitse kauppa</label>
-        <select name="shop" id="shop">
+        <select name="shop" id="shop" data-native-menu="false" data-force-dialog="true" data-native-menu="false" data-filter="true">
           <option value="citymarket_auranlaakso">Citymarket Auranlaakso (Turku)</option>
           <option value="citymarket_klaukkala">Citymarket Klaukkala (Nurmijarvi)</option>
           <option value="citymarket_kupittaa">Citymarket Kupittaa (Turku)</option>
