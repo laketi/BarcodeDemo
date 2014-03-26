@@ -95,14 +95,15 @@ var app = {
 
     search: function() {
         var viewUrl = "https://google.com/m/products?q=";
-//        viewUrl = viewUrl.concat(document.getElementById('ean').value);
-        window.plugins.childBrowser.showWebPage(viewUrl, { showLocationBar: false });
+        alert("Search!");
+        viewUrl = viewUrl.concat(document.getElementById('ean').value);
+        navigator.app.loadUrl(viewUrl, { openExternal:true });
     },
 
     getprices: function() {
         var viewUrl = "https://test.elavaravinto.fi/getprices?q=";
         viewUrl = viewUrl.concat(document.getElementById('ean').value);
-        window.plugins.childBrowser.showWebPage(viewUrl, { showLocationBar: false });
+        navigator.app.loadUrl(viewUrl, { openExternal:true });
     },
 
     encode: function() {
