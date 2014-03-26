@@ -101,7 +101,7 @@ var app = {
     },
 
     getprices: function() {
-        var viewUrl = "https://test.elavaravinto.fi/getprices.php?q=";
+        var viewUrl = "http://test.elavaravinto.fi/getprices.php?q=";
         viewUrl = viewUrl.concat(document.getElementById('ean').value);
         navigator.app.loadUrl(viewUrl, { openExternal:true });
     },
