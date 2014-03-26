@@ -29,6 +29,8 @@ var app = {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         document.getElementById('scan').addEventListener('click', this.scan, false);
         document.getElementById('encode').addEventListener('click', this.encode, false);
+        document.getElementById('search').addEventListener('click', this.search, false);
+        document.getElementById('getprices').addEventListener('click', this.getprices, false);
     },
 
     // deviceready Event Handler
