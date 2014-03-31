@@ -51,6 +51,7 @@ under the License.
       <fieldset class="ui-field-contain">
         <label for="shop">Valitse kauppa johon hintatieto lisataan:</label><br>
         <select name="shop" id="shop" data-native-menu="false" data-force-dialog="true" data-native-menu="false" data-filter="true">
+          <option value="Tuntematon kauppa">Tuntematon kauppa</option>
           <option value="ruoka.citymarket.fi">ruoka.citymarket.fi</option>
           <option value="ruoka.net">ruoka.net</option>
           <option value="kauppahalli24.fi">kauppahalli24.fi</option>
@@ -85,6 +86,9 @@ under the License.
       </fieldset>
         <label for="user">Käyttäjänimi:</label><br>
         <input type=”text” name=”user” id="user" value="test1"> <br>
+        <input type='radio' value='0' name='type' checked='checked' autocomplete="off"/>Normaali hinta
+        <input type='radio' value='1' name='type' autocomplete="off"/> Tarjoushinta
+        <input type='radio' value='2' name='type' autocomplete="off"/> Kanta-asiakashinta
         <label for="hinta">Ostoksen hinta sentteina:</label><br>
         <input type="tel" name="hinta" id="hinta"> <br>
         <label for="ean">Tuotteen EAN-koodi:</label><br>
